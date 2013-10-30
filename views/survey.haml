@@ -1,0 +1,78 @@
+<!doctype html>
+%html{:lang => "en"} 
+%head 
+  %meta{:charset => "UTF-8"}/ 
+  %title Kiba Survey
+  %link{:href=>"//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css", :rel=>"stylesheet"}
+  %script{:src=>"//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"}
+  %script{:src=>"//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+  %script{:src=>"//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"}
+%body
+  .container 
+    .row.jumbotron
+      .container
+        %h1 Hello fellow dog-lover!
+        %p We are Juan, Liam and Kiba.  We would love your input on a new app we’re working on.
+      .row
+        .col-md-4
+          %a{:href => 'http://imgur.com/Dkcdhhy', :title => 'Juan'}
+            %img.img-rounded{:src =>'http://i.imgur.com/Dkcdhhy.jpg', :title => 'Juan', :alt => 'Picture of Juan', :height => '150px'}
+        .col-md-4
+          %a{:href => 'http://imgur.com/0wSKhKo', :title => 'Liam'}
+            %img.img-rounded{:src =>'http://i.imgur.com/0wSKhKo.jpg', :title => 'Liam', :alt => 'Picture of Liam', :height => '150px'}
+        .col-md-4
+          %a{:href => 'http://imgur.com/4R3qk0P', :title => 'Kiba'}
+            %img.img-rounded{:src =>'http://imgur.com/4R3qk0P.jpg', :title => 'Kiba', :alt => 'Cute Goldendoodle named Kiba', :height => '150px'}
+    .well.row
+      %h2 Meet Kiba
+      %p Kiba is an app where dog-owners can find and pay for local dog-walkers. It’s named after Juan’s one year old Goldendoodle who follows Juan wherever he goes.
+      %p Recently, Juan attended a software development bootcamp in Mountain View; however, Kiba couldn’t  join Juan on-site. Not wanting to leave Kiba alone all day, Juan considered different options:  daycares, dog-sitters, and dog-walkers.
+      %p He decided to use a dog-walker.  However, the research process wasn’t easy, and the idea for this app began forming in the back of Juan’s mind.
+      %p Juan casually mentioned the idea to Liam, a new friend he made in the bootcamp, and Liam loved the idea. Together, they are working to create an app that makes your life as a dog-owner and/or dog-walker easier.
+      %p With your help, we can make this app a reality – by responding to our five question survey, you can help focus our development efforts.  In return for doing so, we’ll offer you the opportunity to try our app in beta mode, and you’ll get perks when we launch.
+    .well.row
+      .advantages.col-md-6
+        %h2 Advantages for Dog Owners
+        %ul
+          %li Easily find dog-walkers in your area.
+          %li Compare their rates and experience.
+          %li Dog-walkers are approved through an innovative “trust system” that guarantees your dog gets only the best care.
+          %li Every dog-walker is insured in case something happens.
+          %li Get notifications when the dog-walker picks up and drops off your dog.
+          %li Get text, image and video streams of your dog along with an activity journal.
+          %li GPS tracking for your dog’s journey.
+          %li Schedule single or pack walks in advance or get them on-demand.
+          %li Link your credit card to our system and forget about payment hassles.
+          %li Your information is encrypted and we won’t share it with anybody under any circumstance.  Ever.
+          %li Rate the dog-walkers to improve their service.
+          %li Get perks like free walks and dog related promotions.
+      .advantages.col-md-6
+        %h2 Advantages for Dog Walkers
+        %ul
+          %li Easiest way to find customers in your area and grow your business.
+          %li Focus on what you love: dogs.  Let us take care of business things.
+          %li Manage your customers, schedule walks, setup reminders, bill and invoice through our system and view your business metrics.
+          %li Have an awesome personal website in our system optimized for search engines and get free advertising when people search for dog-walkers in your area.
+          %li Earn more with smart pack-walks: our system traces the optimum route for generating the most income.
+          %li Easily get insured to give your customers peace of mind.
+          %li Get paid weekly through a check or bank transfer.
+          %li Earn extra income by referring customers or other dog-walkers.
+          %li You only pay a transaction fee when you get paid through our system and you can use our awesome features even if you don’t get paid through our system.
+    .well.row
+      %h2.text-center Help us make this happen!
+      %p.text-center Each survey only has 5 questions!
+      .row
+        .col-md-3.col-md-offset-3
+          %h3 Dog Owners
+          %a{:href => url('/dogowner')}
+            %button.btn.btn-primary Take our survey!
+        .col-md-3.col-md-offset-1
+          %h3 Dog Walkers
+          %a{:href => url('/dogwalker')}
+            %button.btn.btn-warning Take our survey!
+    .well.row
+      %h2.text-center Have any questions? Contact us!
+      .row
+        .col-md-2.col-md-offset-5
+          %a{:href => url('mailto:contact@kiba.io')}
+            %button.btn.btn-primary contact@kiba.io
